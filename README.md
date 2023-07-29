@@ -44,17 +44,21 @@ I connected to the database and imported the data from the MySQL dump into RDS. 
 
 
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/3de054a9-391b-4fa6-9ba4-16474b073b44)
+
 The code for importing the data
 
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/b993ee75-a1dc-4e15-951e-332d16f70e30)
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/63ee4c6a-3110-42f8-85da-c96d9f3eb48d)
 
 
 The last and final step was to set up parameters in the Systems Manager Parameter Store.
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/8bcc141c-1730-4756-adec-3d87341beef6)
 
 
 Initially, I thought that this would be an easy final part of the project, but I was stuck on the “database” parameter for quite a while and had no idea why it wouldn’t work when I entered the database name as the value. What I came to realise after some testing and online referencing, I realised that I was entering my DB-instance-ID “capstone-project-db” instead of the DB name which is the name of the actual database “capstonedb”. Once, I managed to overcome that obstacle, I completed the project and checked the querying system once more as a final check and to my excitement, it worked!
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/0b08551f-d049-496a-8c01-ef9ca814c460)
 
 
