@@ -9,6 +9,7 @@ Shirley has approached our team to make sure that her design follows best practi
 Our tasks are to complete the implementation, make sure that the website is secure, and confirm that the website returns data from the query page.
 
 Solution:
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/8039ed6f-7296-456e-b6a8-c26d68eec6e0)
 
 
