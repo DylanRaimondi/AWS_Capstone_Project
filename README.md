@@ -18,6 +18,7 @@ These are the beginning resources that are set up, a bastion host, two availabil
 Initially, what I did was to understand how the resources that we start with are configured, specifically looking at the security group rules to make sure that we have the correct permissions for what we will need.
 
 The first thing that I provisioned was a NAT Gateway in the public subnet. The reasoning for this was that to make the design more secure, I decided to create the EC2 instances for running the PHP application in the private subnet. I corrected the private route table to ensure that it allowed the private instance to talk to the Internet.
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/c2ff2523-0a58-40f8-a212-513af9caca0e)
 
 
@@ -26,6 +27,7 @@ The following step was to create an EC2 private instance from the template that 
 Once the instance was up and running, I set up an SSH connection to the private instance through the Bastion host. I navigated through the files to make sure that the SQL dump file and HTML files were there.
 
 Next, I set up a load balancer with a target group directed towards the EC2 application server.
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/9fd22391-77c3-4757-b0e0-0c88ba64b083)
 
 
@@ -34,10 +36,12 @@ Afterwards, I created an auto-scaling group to be available across the two avail
 After this, I checked that the networking configurations and security groups of all the applications were properly done by searching the DNS name of the load balancer on the internet. It returned the website, but without the function to query which will be sorted out next. But, the important thing was that the configurations of the design so far were all correct, which meant that I could move on to the final parts of the design.
 
 I launched an RDS instance and connected it to the EC2 instance so that it can query the data from the MySQL database in RDS. AWS has an option that automatically sorts out the security groups for the connection which helped to save time, but naturally, I checked the rules to make sure that they were correct.
+
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/7a2af6dd-7cab-4bc0-8235-4e6cb4e8fdde)
 
 
 I connected to the database and imported the data from the MySQL dump into RDS. It was quite a challenge as I was not at all familiar with the language required to perform this action. After some research, and admittedly a lot of trial and error, I managed to perform the data dump into the correct table inside of RDS for MySQL.
+
 
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/3de054a9-391b-4fa6-9ba4-16474b073b44)
 The code for importing the data
