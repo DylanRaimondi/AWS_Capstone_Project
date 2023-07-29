@@ -42,10 +42,9 @@ I launched an RDS instance and connected it to the EC2 instance so that it can q
 
 I connected to the database and imported the data from the MySQL dump into RDS. It was quite a challenge as I was not at all familiar with the language required to perform this action. After some research, and admittedly a lot of trial and error, I managed to perform the data dump into the correct table inside of RDS for MySQL.
 
+The code for importing the data
 
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/3de054a9-391b-4fa6-9ba4-16474b073b44)
-
-The code for importing the data
 
 ![image](https://github.com/DylanRaimondi/AWS_Capstone_Project/assets/111287803/b993ee75-a1dc-4e15-951e-332d16f70e30)
 
